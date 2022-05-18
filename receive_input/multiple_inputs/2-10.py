@@ -2,16 +2,14 @@
 
 ただしここでは、文字列 S の先頭の文字は 1 文字目であるとします。"""
 
-from re import L
-
-
 s = str(input())
 n, m = map(int, input().split())
 
+#文字列の一部を変換することはできないので、一度リストにしてからstrに戻す
 li_s = list(s)
 temp = li_s[n-1]
 li_s[n-1] = li_s[m-1]
 li_s[m-1] = temp
-s = "".join(li_s)
+s = "".join(li_s)   #strに戻してる
 
 print(s)
